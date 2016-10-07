@@ -8,7 +8,7 @@ cache:
 before_install:
   #- which ccache
   - brew update
-  - brew outdated ccache || brew upgrade ccache
+  - brew install ccache
   - which ccache
   - ccache -s
 
