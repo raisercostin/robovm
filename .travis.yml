@@ -6,7 +6,7 @@ cache:
   - $HOME/.ccache
 
 before_install:
-  - which ccache
+  #- which ccache
   - brew update
   - brew outdated ccache || brew upgrade ccache
   - which ccache
