@@ -1,7 +1,16 @@
 language: objective-c
 osx_image: xcode7.3
 
-cache: ccache
+cache:
+  directories:
+  - $HOME/.ccache
+
+before_install:
+  - which ccache
+  - brew update
+  - brew outdated ccache || brew upgrade ccache
+  - which ccache
+  - ccache -s
 
 script:
   - ccache -s
