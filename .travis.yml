@@ -1,13 +1,22 @@
 language: objective-c
-osx_image: xcode7.3
+matrix:
+  include:
+    - os: linux
+      language: c
+    - os: osx
 
 cache:
   directories:
   - $HOME/.ccache
 
+addons:
+  apt:
+    packages:
+      - ccache
+
 before_install:
-  - brew update
-  - brew install ccache
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ccache; fi
   - which ccache
   - ccache -s
 
