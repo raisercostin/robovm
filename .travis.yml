@@ -18,6 +18,8 @@ addons:
     packages:
       - ccache
       - libcap-dev
+      - g++-multilib
+      - gcc-multilib
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
