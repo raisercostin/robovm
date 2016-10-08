@@ -6,6 +6,8 @@ matrix:
       sudo: required
     - os: osx
       language: objective-c
+  allow_failures:
+    - os: linux
 
 cache:
   directories:
