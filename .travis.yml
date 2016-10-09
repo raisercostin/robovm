@@ -30,5 +30,6 @@ before_install:
 
 script:
   - ccache -s
+  - ./fetchIdea.sh 15.0.6
   - ./build.sh
   - ccache -s
