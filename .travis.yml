@@ -29,6 +29,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install openssl; fi
   - openssl version
   - which openssl
+  - mvn --version
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then set MAVEN_OPTS=-Xms256m -Xmx1024m -Xss1024k; fi
   - which ccache
   - ccache -s
