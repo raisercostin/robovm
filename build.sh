@@ -1,7 +1,7 @@
 #/bin/sh
 set -e
 
-VERSION=1.0.1
+VERSION=2.0.3
 mvn -q dependency:get -Dartifact="co.leantechniques:maven-buildtime-extension:$VERSION"
 
 mvn clean install -Dmaven.ext.class.path="$HOME/.m2/repository/co/leantechniques/maven-buildtime-extension/$VERSION/maven-buildtime-extension-$VERSION.jar"
