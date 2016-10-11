@@ -30,7 +30,7 @@ before_install:
   - openssl version
   - which openssl
   - mvn --version
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then set MAVEN_OPTS=-Xms256m -Xmx1024m -Xss1024k; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then set MAVEN_OPTS=-Xms256m -Xmx1024m -Xss1024k -XX:+TieredCompilation -XX:TieredStopAtLevel=1; fi
   - which ccache
   - ccache -s
 
