@@ -54,8 +54,8 @@
         <version>2.3.2</version>
         <configuration>
           <fork>true</fork>
-          <meminitial>512m</meminitial>
-          <maxmem>1536m</maxmem>
+          <meminitial>1024m</meminitial>
+          <maxmem>2048m</maxmem>
         </configuration>
       </plugin>
     </plugins>
