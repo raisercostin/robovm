@@ -1,5 +1,6 @@
 language: c
 
+
 matrix:
   include:
     - os: linux
@@ -15,7 +16,7 @@ cache:
   - $HOME/.ccache
 
 addons:
-  apt:
+  apt: 
     packages:
       - ccache
       - libcap-dev
