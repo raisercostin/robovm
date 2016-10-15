@@ -191,9 +191,7 @@
               <arguments>
                 <argument>--build=release</argument>
                 <argument>--target=ios-x86_64</argument>
-                <argument>--target=ios-x86</argument>
-                <!--<argument>--target=ios-thumbv7</argument>
-                <argument>--target=ios-arm64</argument>-->
+                <argument>--target=ios-x86</argument>                
               </arguments>
               <skip>true</skip>
             </configuration>
