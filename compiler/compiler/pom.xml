@@ -195,7 +195,7 @@
                 <!--<argument>--target=ios-thumbv7</argument>
                 <argument>--target=ios-arm64</argument>-->
               </arguments>
-              <skip>${skipBuildBinaries}</skip>
+              <skip>true</skip>
             </configuration>
           </execution>
         </executions>
