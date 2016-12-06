@@ -58,6 +58,8 @@ local `~/.m2/settings.xml` file:
 
 ### Releasing
 
+(!) Building works only in osx/linux since the build is dependent on shell scripts and cmake.
+
 1. Change the versions to the release one:
    
    ```
