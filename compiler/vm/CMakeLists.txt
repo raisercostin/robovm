@@ -8,6 +8,12 @@ set(IOS_SDK_VERSION 10.0)
 set(IOS_MIN_VERSION 7.0)
 
 cmake_minimum_required(VERSION 2.8.8)
+
+find_program(CCACHE_PROGRAM ccache)
+if(CCACHE_PROGRAM)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
+endif()
+
 project(build)
 include(CheckCCompilerFlag)
 include(ExternalProject)

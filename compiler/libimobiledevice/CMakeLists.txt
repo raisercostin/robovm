@@ -1,4 +1,10 @@
 cmake_minimum_required(VERSION 2.8)
+
+find_program(CCACHE_PROGRAM ccache)
+if(CCACHE_PROGRAM)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
+endif()
+
 project(robovm-libimobiledevice)
 include(ExternalProject)
 
@@ -92,7 +98,7 @@ set(CMAKE_INSTALL_DO_STRIP YES)
 
 include_directories(${JAVA_INCLUDE_PATH} ${JAVA_INCLUDE_PATH2} ${EXTPREFIX}/include)
 
-set(LIBS -limobiledevice -lusbmuxd -lplist /usr/local/opt/openssl/lib/libcrypto.a /usr/local/opt/openssl/lib/libssl.a -lxml2)
+set(LIBS -limobiledevice -lusbmuxd -lplist -lssl -lxml2 -lcrypto)
 
 if(MACOSX)
   set(LIBS ${LIBS} -liconv)
